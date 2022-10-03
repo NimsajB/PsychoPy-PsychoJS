@@ -1,0 +1,14 @@
+### PsychoPy Code for Selectivity experiment September 2022
+
+## code snippet for recall feedback
+
+Item = [ItemA, ItemB, ItemC, ItemD, ItemE, ItemF, ItemG, ItemH, ItemI, ItemJ, ItemK, ItemL, ItemM, ItemN, ItemO, ItemP]
+Value = [ValueA, ValueB, ValueC, ValueD, ValueE, ValueF, ValueG, ValueH, ValueI, ValueJ, ValueK, ValueL, ValueM, ValueN, ValueO, ValueP]
+
+recall = Ind_rec_resp.text.upper()
+recalllist.append(Ind_rec_resp.text.upper())
+
+for item, value in zip(Item, Value):
+    if (value > 0 and item == recall):
+        PointScore += value
+        TotalScore += value
